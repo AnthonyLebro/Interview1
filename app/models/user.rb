@@ -23,4 +23,5 @@ class User < ApplicationRecord
     def maximum_date
       150.years.ago.to_date
     end
+
 end

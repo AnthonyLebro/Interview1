@@ -1,24 +1,14 @@
-# README
+Après avoir eu beaucoup de galères avec Postgresql et une réinstalation complete de Ubuntu (avec évidement RVM, Npm, Rails et co...), voici ENFIN mon test pour Web_atrio!
+Fait en 1h40
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Condition:
 
-Things you may want to cover:
+- Utilisateur accepté uniquement en dessous de 150 ans.
+- Trié par odre alphabétique en forcant les miniscule pour que l'odre de tri ne soit pas perturbé.
 
-* Ruby version
+Le tout crée avec un scaffold.( CRUD )
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+http://localhost:3000/users pour afficher tous les users. (classé par ordre alphabétique du last_name, avec leurs age affiché)
+http://localhost:3000/users/new pour creer un nouveau user.
+http://localhost:3000/users/show pour montrer un profil user en particulier
+http://localhost:3000/users/edit pour modifié un profil user

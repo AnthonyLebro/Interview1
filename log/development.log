@@ -1912,3 +1912,404 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 43ms (Views: 22.7ms | ActiveRecord: 3.4ms)
 
 
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3428880829734915030)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateUsers (20211011211502)
+  [1m[35m (2.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (5.8ms)[0m  [1m[35mDROP TABLE "users"[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::SchemaMigration Destroy (1.1ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20211011211502"]]
+  ↳ bin/rails:4
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(3428880829734915030)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3428880829734915030)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateUsers (20211011211502)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(3428880829734915030)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3428880829734915030)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateUsers (20211011211502)
+  [1m[35m (1.7ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (8.0ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "last_name" character varying, "first_name" character varying, "birthday" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20211011211502_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211011211502"]]
+  ↳ bin/rails:4
+  [1m[35m (4.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_advisory_unlock(3428880829734915030)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/users" for 127.0.0.1 at 2021-10-12 12:15:20 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 247ms (Views: 228.7ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 12:15:23 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (30.3ms)
+  Rendered users/new.html.erb within layouts/application (31.1ms)
+Completed 200 OK in 49ms (Views: 44.6ms | ActiveRecord: 1.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 12:15:37 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"BMKYrAcDwrr7auP7kvWiPdfp5FeTc7u8wjCHb91j1cPgtu1UmhheyozzVNUYkHJDjaCsvB7eSwNrZV5kl5TgWA==", "user"=>{"last_name"=>"Charron", "first_name"=>"Anthony", "birthday"=>"1989-02-08"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[36mUser Create (0.8ms)[0m  [1m[32mINSERT INTO "users" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "Charron"], ["first_name", "Anthony"], ["birthday", "1989-02-08 00:00:00"], ["created_at", "2021-10-12 11:15:37.794206"], ["updated_at", "2021-10-12 11:15:37.794206"]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:27
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 11ms (ActiveRecord: 3.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2021-10-12 12:15:37 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 28ms (Views: 25.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 12:15:39 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 27ms (Views: 25.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 12:15:41 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.6ms)
+  Rendered users/new.html.erb within layouts/application (5.7ms)
+Completed 200 OK in 21ms (Views: 20.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 12:16:00 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"CA1aWYuJynXtb+7Tt8OB6KeVPvScPlVBEo+4I+1AJpLseS+hFpJWBZr2Wf09plGW/dx2HxGTpf672mEop7cTCQ==", "user"=>{"last_name"=>"jean ", "first_name"=>"zoulou", "birthday"=>"1935-10-12"}, "commit"=>"Create User"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "jean "], ["first_name", "zoulou"], ["birthday", "1935-10-12 00:00:00"], ["created_at", "2021-10-12 11:16:00.210107"], ["updated_at", "2021-10-12 11:16:00.210107"]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:27
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 7ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2021-10-12 12:16:00 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 32ms (Views: 30.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 12:16:02 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 13ms (Views: 11.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 12:16:08 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.4ms)
+  Rendered users/new.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 51ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 12:16:18 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l3KPLbZvfmESNBmBvUqwpZMqMyehNYR9gSVL9kFYWERzBvrVK3TiEWWtrq83L2DbyWN7zCyYdMIocJL9C69t3w==", "user"=>{"last_name"=>"xabi", "first_name"=>"aycaguer", "birthday"=>""}, "commit"=>"Create User"}
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:27
+Completed 500 Internal Server Error in 4ms (ActiveRecord: 2.3ms)
+
+
+  
+NoMethodError (undefined method `to_date' for nil:NilClass
+Did you mean?  to_d):
+  
+app/models/user.rb:5:in `valid_age'
+app/controllers/users_controller.rb:27:in `block in create'
+app/controllers/users_controller.rb:26:in `create'
+Started POST "/users" for 127.0.0.1 at 2021-10-12 12:16:38 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"l3KPLbZvfmESNBmBvUqwpZMqMyehNYR9gSVL9kFYWERzBvrVK3TiEWWtrq83L2DbyWN7zCyYdMIocJL9C69t3w==", "user"=>{"last_name"=>"xabi", "first_name"=>"aycaguer", "birthday"=>"1875-04-13"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[36mUser Create (0.2ms)[0m  [1m[32mINSERT INTO "users" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "xabi"], ["first_name", "aycaguer"], ["birthday", "1875-04-13 00:00:00"], ["created_at", "2021-10-12 11:16:38.544732"], ["updated_at", "2021-10-12 11:16:38.544732"]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:27
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 9ms (ActiveRecord: 2.4ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-10-12 12:16:38 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 14ms (Views: 12.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 12:16:40 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 200 OK in 36ms (Views: 33.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 12:20:12 +0100
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/anthony/Bureau/web_atrio/app/models/user.rb:3: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+    validates :first_name, presence: { messa...
+              ^
+):
+  
+app/models/user.rb:3: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/controllers/users_controller.rb:6:in `index'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 12:20:41 +0100
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/anthony/Bureau/web_atrio/app/models/user.rb:3: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+    validate :first_name, presence: { messa...
+             ^
+):
+  
+app/models/user.rb:3: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/controllers/users_controller.rb:6:in `index'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 12:21:52 +0100
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/anthony/Bureau/web_atrio/app/models/user.rb:3: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+    validate :first_name, presence: true
+             ^
+):
+  
+app/models/user.rb:3: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/controllers/users_controller.rb:6:in `index'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 12:23:09 +0100
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/anthony/Bureau/web_atrio/app/models/user.rb:4: syntax error, unexpected ',', expecting `end'
+    :last_name, presence: true
+              ^
+/home/anthony/Bureau/web_atrio/app/models/user.rb:5: syntax error, unexpected ',', expecting `end'
+    :birthday, presence: true
+             ^
+):
+  
+app/models/user.rb:4: syntax error, unexpected ',', expecting `end'
+app/models/user.rb:5: syntax error, unexpected ',', expecting `end'
+app/controllers/users_controller.rb:6:in `index'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 12:24:05 +0100
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/anthony/Bureau/web_atrio/app/models/user.rb:2: syntax error, unexpected ',', expecting =>
+...ame, presence: true,:last_name, presence: true,:birthday, pr...
+...                              ^
+/home/anthony/Bureau/web_atrio/app/models/user.rb:2: Can't assign to true
+...true,:last_name, presence: true,:birthday, presence: true
+...                           ^~~~
+/home/anthony/Bureau/web_atrio/app/models/user.rb:2: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+...name, presence: true,:birthday, presence: true
+...                              ^
+/home/anthony/Bureau/web_atrio/app/models/user.rb:26: syntax error, unexpected `end', expecting end-of-input):
+  
+app/models/user.rb:2: syntax error, unexpected ',', expecting =>
+app/models/user.rb:2: Can't assign to true
+app/models/user.rb:2: syntax error, unexpected ',', expecting '.' or &. or :: or '['
+app/models/user.rb:26: syntax error, unexpected `end', expecting end-of-input
+app/controllers/users_controller.rb:6:in `index'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 12:24:48 +0100
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/anthony/Bureau/web_atrio/app/models/user.rb:3: syntax error, unexpected `end'):
+  
+app/models/user.rb:3: syntax error, unexpected `end'
+app/controllers/users_controller.rb:6:in `index'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 12:24:58 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (6.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 76ms (Views: 39.4ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 12:27:14 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.4ms)
+  Rendered users/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 34ms (Views: 33.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 12:28:07 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.3ms)
+  Rendered users/new.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 30ms (Views: 29.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/1/edit" for 127.0.0.1 at 2021-10-12 12:28:11 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.5ms)
+  Rendered users/edit.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 36ms (Views: 34.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2021-10-12 12:28:15 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 32ms (Views: 30.5ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2021-10-12 12:28:22 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 52ms (Views: 50.0ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 12:30:57 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (18.4ms)
+  Rendered users/new.html.erb within layouts/application (19.6ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 12:32:53 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.6ms)
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 42ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 12:32:58 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ehLSmFhrwMoLbB09MpjwjvlJE8EEvsb81L9EOd8fwOD2PhiwK64wcDm8T0JbJf8ckO5gmjE9+dCVSU81i5n0WQ==", "user"=>{"last_name"=>"", "first_name"=>"", "birthday"=>""}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:27
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.5ms)
+
+
+  
+NoMethodError (undefined method `to_date' for nil:NilClass
+Did you mean?  to_d):
+  
+app/models/user.rb:5:in `valid_age'
+app/controllers/users_controller.rb:27:in `block in create'
+app/controllers/users_controller.rb:26:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 12:35:11 +0100
+Processing by UsersController#new as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+SyntaxError (/home/anthony/Bureau/web_atrio/app/models/user.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+    validate :last_name, :presence => true
+             ^
+):
+  
+app/models/user.rb:4: syntax error, unexpected symbol literal, expecting `do' or '{' or '('
+app/controllers/users_controller.rb:15:in `new'
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 12:35:49 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.6ms)
+  Rendered users/new.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 58ms (Views: 36.0ms | ActiveRecord: 6.4ms)
+
+

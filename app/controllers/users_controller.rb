@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   # GET /users or /users.json
   def index
-    @users = User.all.sort_by{|user|user.last_name}
+    @users= User.all.sort_by{|user|user.last_name.to_s.downcase}
   end
 
   # GET /users/1 or /users/1.json

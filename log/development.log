@@ -1800,3 +1800,115 @@ Processing by UsersController#index as HTML
 Completed 200 OK in 19ms (Views: 15.1ms | ActiveRecord: 2.8ms)
 
 
+Started GET "/users" for 127.0.0.1 at 2021-10-12 11:52:57 +0100
+  [1m[35m (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (12.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.1ms)
+Completed 200 OK in 307ms (Views: 284.5ms | ActiveRecord: 13.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 11:53:19 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 46ms (Views: 31.7ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 11:53:46 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms)
+
+
+  
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" LIMIT $1[0m  [["LIMIT", 11]]
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+NoMethodError (undefined method `downcase' for #<User::ActiveRecord_Relation:0x00007f8254156d68>):
+  
+app/controllers/users_controller.rb:6:in `index'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 11:54:17 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (10.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 500 Internal Server Error in 19ms (ActiveRecord: 12.3ms)
+
+
+  
+NoMethodError (undefined method `downcase=' for nil:NilClass):
+  
+app/controllers/users_controller.rb:6:in `index'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 11:54:36 +0100
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `downcase' for #<Class:0x00007f824d523858>):
+  
+app/controllers/users_controller.rb:6:in `index'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 11:55:21 +0100
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `downcase' for nil:NilClass):
+  
+app/controllers/users_controller.rb:6:in `index'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 11:56:41 +0100
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 152ms (ActiveRecord: 0.0ms)
+
+
+  
+NameError (undefined local variable or method `user' for #<UsersController:0x00007f824d6742e8>
+Did you mean?  super):
+  
+app/controllers/users_controller.rb:6:in `index'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 11:57:04 +0100
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.0ms)
+
+
+  
+NoMethodError (undefined method `lastname' for nil:NilClass):
+  
+app/controllers/users_controller.rb:6:in `index'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 11:57:16 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 67ms (Views: 54.5ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 11:58:26 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+Completed 500 Internal Server Error in 17ms (ActiveRecord: 8.1ms)
+
+
+  
+NoMethodError (undefined method `downcase=' for "":String
+Did you mean?  downcase
+               downcase!):
+  
+app/controllers/users_controller.rb:6:in `index'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 11:59:04 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 43ms (Views: 22.7ms | ActiveRecord: 3.4ms)
+
+

@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  last_name: MyString
+  first_name: MyString
+  birthday: 2021-10-11 22:15:02
+
+two:
+  last_name: MyString
+  first_name: MyString
+  birthday: 2021-10-11 22:15:02

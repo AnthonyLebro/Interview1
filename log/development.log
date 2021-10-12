@@ -1,0 +1,1802 @@
+  [1m[35m (428.5ms)[0m  [1m[35mCREATE DATABASE "test_webatrio_development" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (411.8ms)[0m  [1m[35mCREATE DATABASE "test_webatrio_test" ENCODING = 'unicode'[0m
+  ↳ bin/rails:4
+  [1m[35m (11.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  ↳ bin/rails:4
+  [1m[35m (7.3ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3428880829734915030)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Migrating to CreateUsers (20211011211502)
+  [1m[35m (3.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[35m (6.9ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "last_name" character varying, "first_name" character varying, "birthday" timestamp, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL)[0m
+  ↳ db/migrate/20211011211502_create_users.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20211011211502"]]
+  ↳ bin/rails:4
+  [1m[35m (2.8ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ bin/rails:4
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2021-10-12 07:17:10.905566"], ["updated_at", "2021-10-12 07:17:10.905566"]]
+  ↳ bin/rails:4
+  [1m[35m (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ bin/rails:4
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(3428880829734915030)[0m
+  ↳ bin/rails:4
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:4
+Started GET "/" for 127.0.0.1 at 2021-10-12 08:18:03 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (1.8ms)
+Completed 200 OK in 27ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2021-10-12 08:18:17 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 08:18:26 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 719ms (Views: 712.7ms | ActiveRecord: 5.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 08:18:29 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (20.2ms)
+  Rendered users/new.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 66ms (Views: 60.0ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 08:18:40 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 38ms (Views: 36.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 08:18:47 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.8ms)
+  Rendered users/new.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 36ms (Views: 35.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 08:19:33 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"SxdpIkjERWahvcssyxSfBKIlhE10bxRWCcQZbDEGXy25Km9NDEIuvrN7qsiXOwnHBkH0MkJxnLPi5ul9BUcKCw==", "user"=>{"last_name"=>"xabi", "first_name"=>"merci", "birthday(1i)"=>"2016", "birthday(2i)"=>"1", "birthday(3i)"=>"6", "birthday(4i)"=>"05", "birthday(5i)"=>"10"}, "commit"=>"Create User"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (3.5ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.1ms)
+  Rendered users/new.html.erb within layouts/application (7.0ms)
+Completed 422 Unprocessable Entity in 258ms (Views: 49.5ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 08:19:56 +0100
+Processing by UsersController#index as HTML
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:16
+  Rendered users/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 65ms (Views: 61.8ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 08:24:42 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.5ms)
+  Rendered users/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 75ms (Views: 48.3ms | ActiveRecord: 3.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 08:24:54 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"q4fCL4seUKnmkrdabDv6gDzBpB+1ad0/BZZHyowVONVZusRAz5g7cfRU1r4wFGxDmKXUYIN3VdrutLfbuFRt8w==", "user"=>{"last_name"=>"xab", "first_name"=>"xab", "birthday(1i)"=>"2016", "birthday(2i)"=>"10", "birthday(3i)"=>"12", "birthday(4i)"=>"07", "birthday(5i)"=>"24"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.4ms)
+  Rendered users/new.html.erb within layouts/application (3.2ms)
+Completed 422 Unprocessable Entity in 207ms (Views: 30.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 08:28:15 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 63ms (Views: 35.7ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 08:28:37 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.3ms)
+  Rendered users/new.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 50ms (Views: 41.2ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-12 08:29:22 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (1.1ms)
+Completed 200 OK in 5ms (Views: 4.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 08:31:02 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (14.3ms)
+  Rendered users/new.html.erb within layouts/application (16.3ms)
+Completed 200 OK in 314ms (Views: 291.6ms | ActiveRecord: 6.1ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 08:31:18 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LVKVWFNkwAxRcbGn4qzG9TaJa8wIGjvfovGxMAceZ4+avhr3o048yE+1+xOWi06WjlPVASyA2GH2EPXr2Kw+WQ==", "user"=>{"last_name"=>"xab", "first_name"=>"xabi", "birthday(1i)"=>"2020", "birthday(2i)"=>"3", "birthday(3i)"=>"12", "birthday(4i)"=>"05", "birthday(5i)"=>"24"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (1.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.6ms)
+  Rendered users/new.html.erb within layouts/application (8.6ms)
+Completed 422 Unprocessable Entity in 256ms (Views: 38.7ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 08:31:47 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"YrtzYAsJo9GOu0e8B81WUkNnz/mSI6fn59xtCpgax6bVV/zP+yNfFZB/DQhz6t4x+71xNLa5RFmzPSnRR6iecA==", "user"=>{"last_name"=>"xab", "first_name"=>"xabi", "birthday(1i)"=>"2019", "birthday(2i)"=>"3", "birthday(3i)"=>"12", "birthday(4i)"=>"05", "birthday(5i)"=>"24"}, "commit"=>"Create User"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+Started GET "/users" for 127.0.0.1 at 2021-10-12 08:32:14 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 288ms (Views: 285.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 08:32:17 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (5.9ms)
+  Rendered users/new.html.erb within layouts/application (108.3ms)
+Completed 200 OK in 341ms (Views: 340.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 08:32:28 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mfYH/U38vxJlm2QrobOn41FFsfVfDgRMNpm82g3Fd6hrywGSCXrUynddBc/9nDEg9SHBimkQjKndu0zLOYQijg==", "user"=>{"last_name"=>"xabi", "first_name"=>"bro", "birthday(1i)"=>"2026", "birthday(2i)"=>"10", "birthday(3i)"=>"12", "birthday(4i)"=>"07", "birthday(5i)"=>"32"}, "commit"=>"Create User"}
+  [1m[35m (105.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (42.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:27
+Completed 500 Internal Server Error in 77764ms (ActiveRecord: 43.0ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+app/models/user.rb:22:in `maximum_date'
+app/models/user.rb:14:in `valid_date_range'
+app/models/user.rb:8:in `valid_age'
+app/controllers/users_controller.rb:27:in `block in create'
+app/controllers/users_controller.rb:26:in `create'
+  [1m[35m (34.0ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:27
+Completed 500 Internal Server Error in 105604ms (ActiveRecord: 139.3ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+app/models/user.rb:22:in `maximum_date'
+app/models/user.rb:14:in `valid_date_range'
+app/models/user.rb:8:in `valid_age'
+app/controllers/users_controller.rb:27:in `block in create'
+app/controllers/users_controller.rb:26:in `create'
+Started GET "/" for 127.0.0.1 at 2021-10-12 08:43:50 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (1.9ms)
+Completed 200 OK in 22ms (Views: 19.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/user" for 127.0.0.1 at 2021-10-12 08:43:56 +0100
+  
+ActionController::RoutingError (No route matches [GET] "/user"):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/debug_exceptions.rb:65:in `call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 08:44:00 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 304ms (Views: 297.1ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 08:44:02 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (11.4ms)
+  Rendered users/new.html.erb within layouts/application (15.0ms)
+Completed 200 OK in 58ms (Views: 52.5ms | ActiveRecord: 1.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 08:45:07 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"LpcyZ8o2DcvTIFffi2PIWD5bWb8aGei7UBP4XO3hIXa/WlhcQ2TuyR0d/LjJWzO6FQaGByStaZvcT7hbSULxWg==", "user"=>{"last_name"=>"xabi", "first_name"=>"xab", "birthday"=>"1991-10-08"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[36mUser Create (2.7ms)[0m  [1m[32mINSERT INTO "users" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "xabi"], ["first_name", "xab"], ["birthday", "1991-10-08 00:00:00"], ["created_at", "2021-10-12 07:45:07.771642"], ["updated_at", "2021-10-12 07:45:07.771642"]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (1.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:27
+Redirected to http://localhost:3000/users/1
+Completed 302 Found in 141ms (ActiveRecord: 4.0ms)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2021-10-12 08:45:07 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 32ms (Views: 25.6ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 08:45:12 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 34ms (Views: 32.1ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 08:45:44 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.6ms)
+  Rendered users/new.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 58ms (Views: 57.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 08:45:58 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"6M4R76ffNzqMJ+RXeMvChn5Repy4pK89Nwo5DJBziqJ5A3vULo3UOEIaTzA68zlkVQylJIYQLh27VnkLNNBajg==", "user"=>{"last_name"=>"antho", "first_name"=>"lebro", "birthday"=>"1989-02-08"}, "commit"=>"Create User"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:27
+Completed 500 Internal Server Error in 38719ms (ActiveRecord: 0.5ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+app/models/user.rb:22:in `maximum_date'
+app/models/user.rb:14:in `valid_date_range'
+app/models/user.rb:8:in `valid_age'
+app/controllers/users_controller.rb:27:in `block in create'
+app/controllers/users_controller.rb:26:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 08:47:25 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.3ms)
+  Rendered users/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 611ms (Views: 610.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 08:47:42 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"G7BebXNxZYCNT3f4SSW7V02h3uwIREoQYYtotvz9+8zVoEqujnncAFU9uIHwdTIpbuECsE8LV6v1h5oI2F7KlQ==", "user"=>{"last_name"=>"antho", "first_name"=>"anthouuuu", "birthday"=>"1989-02-08"}, "commit"=>"Create User"}
+  [1m[35m (1.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (5.7ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:27
+Completed 500 Internal Server Error in 82587ms (ActiveRecord: 7.5ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+app/models/user.rb:22:in `maximum_date'
+app/models/user.rb:14:in `valid_date_range'
+app/models/user.rb:8:in `valid_age'
+app/controllers/users_controller.rb:27:in `block in create'
+app/controllers/users_controller.rb:26:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 08:50:14 +0100
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 08:54:23 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.2ms)
+  Rendered users/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 395ms (Views: 349.1ms | ActiveRecord: 11.5ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 08:54:39 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"31b6NkfDDn+s+OpZVL3eYHNA2gqImTmDKDjLoKthslVOm5ANzpHtfWLFQT4WhSWCWB0FsrYtuKOkZIunD8JieQ==", "user"=>{"last_name"=>"antho", "first_name"=>"cinthia", "birthday"=>"2010-12-02"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (1.8ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.2ms)
+  Rendered users/new.html.erb within layouts/application (12.2ms)
+Completed 422 Unprocessable Entity in 255ms (Views: 45.1ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 08:55:02 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"rARQ/4Bi5ejzWYLCPniLnkFiI+6/kObVn41kVhT2UnhiFEQ8fWpcaCsrTbuHKALgYiL/svjf+24LgZboMFVjIQ==", "user"=>{"last_name"=>"antho", "first_name"=>"cinthia", "birthday"=>"1927-12-02"}, "commit"=>"Create User"}
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+Started POST "/users" for 127.0.0.1 at 2021-10-12 08:55:50 +0100
+  [1m[35m (12.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"31b6NkfDDn+s+OpZVL3eYHNA2gqImTmDKDjLoKthslVOm5ANzpHtfWLFQT4WhSWCWB0FsrYtuKOkZIunD8JieQ==", "user"=>{"last_name"=>"antho", "first_name"=>"cinthia", "birthday"=>"2010-12-02"}, "commit"=>"Create User"}
+  [1m[35m (2.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (2.6ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (7.0ms)
+  Rendered users/new.html.erb within layouts/application (11.5ms)
+Completed 422 Unprocessable Entity in 487ms (Views: 239.7ms | ActiveRecord: 7.2ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 08:56:21 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"31b6NkfDDn+s+OpZVL3eYHNA2gqImTmDKDjLoKthslVOm5ANzpHtfWLFQT4WhSWCWB0FsrYtuKOkZIunD8JieQ==", "user"=>{"last_name"=>"antho", "first_name"=>"cinthia", "birthday"=>"1927-12-02"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "antho"], ["first_name", "cinthia"], ["birthday", "1927-12-02 00:00:00"], ["created_at", "2021-10-12 07:56:21.393385"], ["updated_at", "2021-10-12 07:56:21.393385"]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:27
+Redirected to http://localhost:3000/users/2
+Completed 302 Found in 117ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/users/2" for 127.0.0.1 at 2021-10-12 08:56:21 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 267ms (Views: 261.5ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 08:56:26 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 32ms (Views: 29.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 08:56:31 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (9.4ms)
+  Rendered users/new.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 43ms (Views: 42.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 08:57:05 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"tVgXcB0uXWdpfoYsv11nXtsNSP8b9BHDMfwF2jruM78klX1LlHy+ZadDLUv9ZZy88FCXRyVAkOO9oEXdnk3jkw==", "user"=>{"last_name"=>"marion", "first_name"=>"satan", "birthday"=>"1950-10-06"}, "commit"=>"Create User"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+Started POST "/users" for 127.0.0.1 at 2021-10-12 08:57:33 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B5yJjQRw0cRdHFscT0F418LLEKY+b2XK0KiTRgmiVjPJjJ1O+XhoRIVulGX2EfGp4YvM+nkgeHFEpGH4LQFnag==", "user"=>{"last_name"=>"marion", "first_name"=>"satan", "birthday"=>"1950-10-06"}, "commit"=>"Create User"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 4ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:215:in `handle_unverified_request'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:247:in `handle_unverified_request'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:242:in `verify_authenticity_token'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:426:in `block in make_lambda'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:199:in `block in halting'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `each'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `invoke_before'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:131:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/callbacks.rb:41:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/rescue.rb:22:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `block in instrument'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `instrument'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/base.rb:134:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionview-5.2.6/lib/action_view/rendering.rb:32:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2021-10-12 08:59:49 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B5yJjQRw0cRdHFscT0F418LLEKY+b2XK0KiTRgmiVjPJjJ1O+XhoRIVulGX2EfGp4YvM+nkgeHFEpGH4LQFnag==", "user"=>{"last_name"=>"marion", "first_name"=>"satan", "birthday"=>"1950-10-06"}, "commit"=>"Create User"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 6ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:215:in `handle_unverified_request'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:247:in `handle_unverified_request'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:242:in `verify_authenticity_token'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:426:in `block in make_lambda'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:199:in `block in halting'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `each'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `invoke_before'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:131:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/callbacks.rb:41:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/rescue.rb:22:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `block in instrument'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `instrument'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/base.rb:134:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionview-5.2.6/lib/action_view/rendering.rb:32:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2021-10-12 09:01:43 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B5yJjQRw0cRdHFscT0F418LLEKY+b2XK0KiTRgmiVjPJjJ1O+XhoRIVulGX2EfGp4YvM+nkgeHFEpGH4LQFnag==", "user"=>{"last_name"=>"marion", "first_name"=>"satan", "birthday"=>"1950-10-06"}, "commit"=>"Create User"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:215:in `handle_unverified_request'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:247:in `handle_unverified_request'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:242:in `verify_authenticity_token'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:426:in `block in make_lambda'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:199:in `block in halting'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `each'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `invoke_before'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:131:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/callbacks.rb:41:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/rescue.rb:22:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `block in instrument'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `instrument'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/base.rb:134:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionview-5.2.6/lib/action_view/rendering.rb:32:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 09:02:24 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 287ms (Views: 263.9ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 09:02:28 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (3.5ms)
+  Rendered users/new.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 50ms (Views: 49.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 09:02:46 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"GdtnTZkLYka00NPQo8kj7BZjK1M5yM7hn7luLpuWN4tyVFnCjBIPA/YcNFh7ogcqWL26DHRtgjrYMPMiKy2cYA==", "user"=>{"last_name"=>"antho", "first_name"=>"marion", "birthday"=>"1996-10-06"}, "commit"=>"Create User"}
+  [1m[35m (11.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (6.9ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.6ms)
+  Rendered users/new.html.erb within layouts/application (2.4ms)
+Completed 422 Unprocessable Entity in 145ms (Views: 26.4ms | ActiveRecord: 18.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 09:03:08 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.8ms)
+Completed 200 OK in 61ms (Views: 52.4ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 09:03:10 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.8ms)
+  Rendered users/new.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 69ms (Views: 68.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 09:03:33 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"J3xpsOHrqao51lkzuqS70Qr4DpDXxnrbdUV0rlrbaZZM81c/9PLE73savrtiz58XRCafz5pjNgAyzOmi6mDCfQ==", "user"=>{"last_name"=>"marion", "first_name"=>"john", "birthday"=>""}, "commit"=>"Create User"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.6ms)
+  Rendered users/new.html.erb within layouts/application (4.9ms)
+Completed 422 Unprocessable Entity in 143ms (Views: 26.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 09:03:36 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 38ms (Views: 35.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 09:03:39 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.4ms)
+  Rendered users/new.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 43ms (Views: 41.8ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 09:04:03 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"VU2Euyp1uZEDWN0I7Em3K+iyE9Mp57hKzN1irpADqIg+wro0P2zU1EGUOoA0IpPtpmyCjGRC9JGLVP+iILgDYw==", "user"=>{"last_name"=>"marion", "first_name"=>"sattan", "birthday"=>"1947-10-07"}, "commit"=>"Create User"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 09:05:03 +0100
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.2ms)
+  Rendered users/new.html.erb within layouts/application (10.1ms)
+Completed 200 OK in 358ms (Views: 317.2ms | ActiveRecord: 4.4ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 09:05:10 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"FCEo+l/SqTzNp4UCj6rwg5t/dAfVWPCUeh+PAXJ3d+GQPFbE90CaqmzacsJMwM9KpvXW29LxA2y22lKL+9+ngg==", "user"=>{"last_name"=>"marion", "first_name"=>"sattan", "birthday"=>"1947-10-07"}, "commit"=>"Create User"}
+  [1m[35m (1.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "marion"], ["first_name", "sattan"], ["birthday", "1947-10-07 00:00:00"], ["created_at", "2021-10-12 08:05:10.760239"], ["updated_at", "2021-10-12 08:05:10.760239"]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:27
+Redirected to http://localhost:3000/users/3
+Completed 302 Found in 95ms (ActiveRecord: 3.8ms)
+
+
+Started GET "/users/3" for 127.0.0.1 at 2021-10-12 09:05:10 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"3"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 31ms (Views: 28.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 09:05:13 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 42ms (Views: 38.3ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 09:05:40 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (32.1ms)
+  Rendered users/new.html.erb within layouts/application (43.3ms)
+Completed 200 OK in 72ms (Views: 71.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 09:06:11 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"ZjnJkmtTOXVd+37BXbDcQEV0O6DJnezd+x5Jyr2rHaUwu3qAq52auyvI/Pb4edb1b1DKUIcaW9VACkDWgohF/A==", "user"=>{"last_name"=>"adam", "first_name"=>"zoro", "birthday"=>"1943-10-26"}, "commit"=>"Create User"}
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+Started POST "/users" for 127.0.0.1 at 2021-10-12 09:06:37 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V0Q2ZL4oxtQ3CKQlDBlWavPT71N+ibyCsnax+x1bbZfTWUhaFrr1QpZ1U+XPc2mjzllNj3kgT3p+s2xxlPO99A==", "user"=>{"last_name"=>"adam", "first_name"=>"zoro", "birthday"=>"1943-10-26"}, "commit"=>"Create User"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 16ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:215:in `handle_unverified_request'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:247:in `handle_unverified_request'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:242:in `verify_authenticity_token'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:426:in `block in make_lambda'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:199:in `block in halting'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `each'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `invoke_before'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:131:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/callbacks.rb:41:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/rescue.rb:22:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `block in instrument'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `instrument'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/base.rb:134:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionview-5.2.6/lib/action_view/rendering.rb:32:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2021-10-12 09:07:41 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"V0Q2ZL4oxtQ3CKQlDBlWavPT71N+ibyCsnax+x1bbZfTWUhaFrr1QpZ1U+XPc2mjzllNj3kgT3p+s2xxlPO99A==", "user"=>{"last_name"=>"adam", "first_name"=>"zoro", "birthday"=>"1943-10-26"}, "commit"=>"Create User"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:215:in `handle_unverified_request'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:247:in `handle_unverified_request'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:242:in `verify_authenticity_token'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:426:in `block in make_lambda'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:199:in `block in halting'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `each'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `invoke_before'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:131:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/callbacks.rb:41:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/rescue.rb:22:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `block in instrument'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `instrument'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/base.rb:134:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionview-5.2.6/lib/action_view/rendering.rb:32:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 09:08:15 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (11.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 364ms (Views: 312.7ms | ActiveRecord: 13.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 09:08:18 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (9.5ms)
+  Rendered users/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 09:08:35 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"vXrPi4YD0NnQzsgfBhvIDEXREjd6iIJgwD8zS8x7LbrwPLfEkWQyytP4GsUE6sOy39IxtL+TxtYGo0H1gWhFug==", "user"=>{"last_name"=>"adma", "first_name"=>"zoro", "birthday"=>"2007-10-05"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.9ms)
+  Rendered users/new.html.erb within layouts/application (9.9ms)
+Completed 422 Unprocessable Entity in 250ms (Views: 37.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 09:08:43 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.3ms)
+Completed 200 OK in 42ms (Views: 39.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 09:08:46 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.5ms)
+  Rendered users/new.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 45ms (Views: 39.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 09:09:06 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yh/fXbNAViKhZ6FJD3/VF/7Df9/mQfOwNy2OxKgCZhyHWacSpCe0MaJRc5MNjt6pZMBcXCNatwbxsfx65REOHA==", "user"=>{"last_name"=>"adam", "first_name"=>"zoro", "birthday"=>"1995-10-21"}, "commit"=>"Create User"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 09:10:19 +0100
+  [1m[35m (1.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (10.7ms)
+  Rendered users/new.html.erb within layouts/application (23.1ms)
+Completed 200 OK in 399ms (Views: 370.2ms | ActiveRecord: 3.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 09:10:32 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"DC7KXuvH9bpbZUpaiZkRoN9MALGZFRuZpQRwZnvc3n265txLP8jjI6rdh8Fdtzv1HRXkfXTa1VdHazvZ8LrCLA==", "user"=>{"last_name"=>"adam", "first_name"=>"zoro", "birthday"=>"1993-10-21"}, "commit"=>"Create User"}
+  [1m[35m (11.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[36mUser Create (9.4ms)[0m  [1m[32mINSERT INTO "users" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "adam"], ["first_name", "zoro"], ["birthday", "1993-10-21 00:00:00"], ["created_at", "2021-10-12 08:10:32.505450"], ["updated_at", "2021-10-12 08:10:32.505450"]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (3.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:27
+Redirected to http://localhost:3000/users/4
+Completed 302 Found in 141ms (ActiveRecord: 23.8ms)
+
+
+Started GET "/users/4" for 127.0.0.1 at 2021-10-12 09:10:32 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.7ms)
+Completed 200 OK in 31ms (Views: 17.9ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/4/edit" for 127.0.0.1 at 2021-10-12 09:10:34 +0100
+Processing by UsersController#edit as HTML
+  Parameters: {"id"=>"4"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62
+  Rendering users/edit.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/edit.html.erb within layouts/application (3.3ms)
+Completed 200 OK in 52ms (Views: 50.6ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 09:10:36 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 43ms (Views: 39.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 09:10:49 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.4ms)
+  Rendered users/new.html.erb within layouts/application (8.3ms)
+Completed 200 OK in 37ms (Views: 36.1ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 09:11:10 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"mZ1iiPyMTqKtxo0v9IyzIkWKArtR0pTGsBdFz6h4NNJOcP45ugWcmmlDdQb3jfkyWkzAC7Uv0284DILR2MR6qA==", "user"=>{"last_name"=>"zora", "first_name"=>"adamé", "birthday"=>"1986-10-06"}, "commit"=>"Create User"}
+  [1m[35m (2.8ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:27
+Completed 500 Internal Server Error in 37821ms (ActiveRecord: 3.0ms)
+
+
+  
+SystemStackError (stack level too deep):
+  
+app/models/user.rb:22:in `maximum_date'
+app/models/user.rb:14:in `valid_date_range'
+app/models/user.rb:8:in `valid_age'
+app/controllers/users_controller.rb:27:in `block in create'
+app/controllers/users_controller.rb:26:in `create'
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 09:58:54 +0100
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (4.6ms)
+  Rendered users/new.html.erb within layouts/application (14.2ms)
+Completed 200 OK in 324ms (Views: 280.1ms | ActiveRecord: 1.8ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 09:58:56 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xTCHpYKKL2oMFMwQ3dORTeO3qaOkmkCCsJtOBONlzF1z+JGwVoU58/2sAYsJ/bsYIe5Nb0lVjkxS9AW7aAPQDA==", "user"=>{"last_name"=>"zora", "first_name"=>"adamé", "birthday"=>"1986-10-06"}, "commit"=>"Create User"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:215:in `handle_unverified_request'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:247:in `handle_unverified_request'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:242:in `verify_authenticity_token'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:426:in `block in make_lambda'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:199:in `block in halting'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `each'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `invoke_before'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:131:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/callbacks.rb:41:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/rescue.rb:22:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `block in instrument'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `instrument'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/base.rb:134:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionview-5.2.6/lib/action_view/rendering.rb:32:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/users" for 127.0.0.1 at 2021-10-12 09:59:02 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"xTCHpYKKL2oMFMwQ3dORTeO3qaOkmkCCsJtOBONlzF1z+JGwVoU58/2sAYsJ/bsYIe5Nb0lVjkxS9AW7aAPQDA==", "user"=>{"last_name"=>"zora", "first_name"=>"adamé", "birthday"=>"1986-10-06"}, "commit"=>"Create User"}
+Can't verify CSRF token authenticity.
+Completed 422 Unprocessable Entity in 1ms (ActiveRecord: 0.0ms)
+
+
+  
+ActionController::InvalidAuthenticityToken (ActionController::InvalidAuthenticityToken):
+  
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:215:in `handle_unverified_request'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:247:in `handle_unverified_request'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/request_forgery_protection.rb:242:in `verify_authenticity_token'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:426:in `block in make_lambda'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:198:in `block (2 levels) in halting'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:199:in `block in halting'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `block in invoke_before'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `each'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:513:in `invoke_before'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:131:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/callbacks.rb:41:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/rescue.rb:22:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/instrumentation.rb:34:in `block in process_action'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `block in instrument'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications/instrumenter.rb:23:in `instrument'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/notifications.rb:168:in `instrument'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/instrumentation.rb:32:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal/params_wrapper.rb:256:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/railties/controller_runtime.rb:24:in `process_action'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/abstract_controller/base.rb:134:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionview-5.2.6/lib/action_view/rendering.rb:32:in `process'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal.rb:191:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_controller/metal.rb:252:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:52:in `dispatch'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:34:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:52:in `block in serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:35:in `each'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/journey/router.rb:35:in `serve'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/routing/route_set.rb:840:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/tempfile_reaper.rb:15:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/etag.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/conditional_get.rb:40:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/head.rb:12:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/http/content_security_policy.rb:18:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:266:in `context'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/session/abstract/id.rb:260:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/cookies.rb:670:in `call'
+vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/migration.rb:559:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/callbacks.rb:98:in `run_callbacks'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:135:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:30:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `catch'
+vendor/bundle/ruby/2.7.0/gems/web-console-3.7.0/lib/web_console/middleware.rb:20:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:38:in `call_app'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:26:in `block in call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `block in tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:28:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/tagged_logging.rb:71:in `tagged'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/rack/logger.rb:26:in `call'
+vendor/bundle/ruby/2.7.0/gems/sprockets-rails-3.2.2/lib/sprockets/rails/quiet_assets.rb:13:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/request_id.rb:27:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/method_override.rb:24:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/runtime.rb:22:in `call'
+vendor/bundle/ruby/2.7.0/gems/activesupport-5.2.6/lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/executor.rb:14:in `call'
+vendor/bundle/ruby/2.7.0/gems/actionpack-5.2.6/lib/action_dispatch/middleware/static.rb:127:in `call'
+vendor/bundle/ruby/2.7.0/gems/rack-2.2.3/lib/rack/sendfile.rb:110:in `call'
+vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/engine.rb:524:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/configuration.rb:227:in `call'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:706:in `handle_request'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:476:in `process_client'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/server.rb:334:in `block in run'
+vendor/bundle/ruby/2.7.0/gems/puma-3.12.6/lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 10:00:02 +0100
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (7.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 282ms (Views: 264.2ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 10:00:08 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (11.8ms)
+  Rendered users/new.html.erb within layouts/application (15.7ms)
+Completed 200 OK in 43ms (Views: 42.4ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 10:00:29 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"h5/+Phb+RN/2KGQNP5uzy17GCvawcNRN7dllHWw2mVVj64vGi+XYr4Gx0yO1/mO1BI9CHT3dJPJEjLwWJsGszg==", "user"=>{"last_name"=>"youri", "first_name"=>"derien", "birthday"=>"1993-10-06"}, "commit"=>"Create User"}
+  [1m[35m (7.9ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "youri"], ["first_name", "derien"], ["birthday", "1993-10-06 00:00:00"], ["created_at", "2021-10-12 09:00:29.909569"], ["updated_at", "2021-10-12 09:00:29.909569"]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (2.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:27
+Redirected to http://localhost:3000/users/5
+Completed 302 Found in 17ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/users/5" for 127.0.0.1 at 2021-10-12 10:00:29 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 41ms (Views: 37.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 10:00:39 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.2ms)
+Completed 200 OK in 30ms (Views: 27.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 10:01:05 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (2.6ms)
+  Rendered users/new.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 38ms (Views: 37.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 10:01:32 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"wuyM+/GsBHqyLLV0lroSA0NmpvHKdkEOFu7KpWS6F7MmmPkDbLeYCsW1Aloc38J9GS/uGkfbsbG/uxOuLk0iKA==", "user"=>{"last_name"=>"thibault", "first_name"=>"trabanoscope", "birthday"=>"1964-12-27"}, "commit"=>"Create User"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[36mUser Create (0.9ms)[0m  [1m[32mINSERT INTO "users" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "thibault"], ["first_name", "trabanoscope"], ["birthday", "1964-12-27 00:00:00"], ["created_at", "2021-10-12 09:01:32.754764"], ["updated_at", "2021-10-12 09:01:32.754764"]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (1.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:27
+Redirected to http://localhost:3000/users/6
+Completed 302 Found in 8ms (ActiveRecord: 2.6ms)
+
+
+Started GET "/users/6" for 127.0.0.1 at 2021-10-12 10:01:32 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 6], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 11ms (Views: 9.8ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 10:01:36 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 60ms (Views: 57.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 10:25:10 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 34ms (Views: 32.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-12 10:29:27 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (1.0ms)
+Completed 200 OK in 4ms (Views: 3.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 10:40:01 +0100
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (5.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 285ms (Views: 257.5ms | ActiveRecord: 16.1ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 10:41:49 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.8ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 6.7ms)
+
+
+  
+ActionView::Template::Error (undefined method `age' for #<User:0x00007f4f3c1933a8>):
+    17:       <tr>
+    18:         <td><%= user.last_name %></td>
+    19:         <td><%= user.first_name %></td>
+    20:         <td><%= user.age %></td>
+    21:         <td><%= link_to 'Show', user %></td>
+    22:         <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    23:         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Etes vous sur?' } %></td>
+  
+app/views/users/index.html.erb:20:in `block in _app_views_users_index_html_erb___2805808894057944321_16500'
+app/views/users/index.html.erb:16:in `each'
+app/views/users/index.html.erb:16:in `_app_views_users_index_html_erb___2805808894057944321_16500'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 10:43:54 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 30ms (ActiveRecord: 4.1ms)
+
+
+  
+ActionView::Template::Error (undefined method `age' for #<User:0x00007f4f3c628ff8>):
+    17:       <tr>
+    18:         <td><%= user.last_name %></td>
+    19:         <td><%= user.first_name %></td>
+    20:         <td><%= user.age %></td>
+    21:         <td><%= link_to 'Show', user %></td>
+    22:         <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    23:         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Etes vous sur?' } %></td>
+  
+app/views/users/index.html.erb:20:in `block in _app_views_users_index_html_erb___2805808894057944321_19200'
+app/views/users/index.html.erb:16:in `each'
+app/views/users/index.html.erb:16:in `_app_views_users_index_html_erb___2805808894057944321_19200'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 10:50:49 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (3.8ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 5.9ms)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `date' for #<User:0x00007f4f354179a0>
+Did you mean?  update):
+    17:       <tr>
+    18:         <td><%= user.last_name %></td>
+    19:         <td><%= user.first_name %></td>
+    20:         <td><%= user.age %></td>
+    21:         <td><%= link_to 'Show', user %></td>
+    22:         <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    23:         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Etes vous sur?' } %></td>
+  
+app/models/user.rb:11:in `age'
+app/views/users/index.html.erb:20:in `block in _app_views_users_index_html_erb___2805808894057944321_21920'
+app/views/users/index.html.erb:16:in `each'
+app/views/users/index.html.erb:16:in `_app_views_users_index_html_erb___2805808894057944321_21920'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 10:52:12 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.9ms)
+Completed 500 Internal Server Error in 24ms (ActiveRecord: 5.3ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    17:       <tr>
+    18:         <td><%= user.last_name %></td>
+    19:         <td><%= user.first_name %></td>
+    20:         <td><%= user.age %></td>
+    21:         <td><%= link_to 'Show', user %></td>
+    22:         <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    23:         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Etes vous sur?' } %></td>
+  
+app/models/user.rb:12:in `age'
+app/views/users/index.html.erb:20:in `block in _app_views_users_index_html_erb___2805808894057944321_24620'
+app/views/users/index.html.erb:16:in `each'
+app/views/users/index.html.erb:16:in `_app_views_users_index_html_erb___2805808894057944321_24620'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 10:53:47 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.5ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    17:       <tr>
+    18:         <td><%= user.last_name %></td>
+    19:         <td><%= user.first_name %></td>
+    20:         <td><%= user.age %></td>
+    21:         <td><%= link_to 'Show', user %></td>
+    22:         <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    23:         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Etes vous sur?' } %></td>
+  
+app/models/user.rb:12:in `age'
+app/views/users/index.html.erb:20:in `block in _app_views_users_index_html_erb___2805808894057944321_25140'
+app/views/users/index.html.erb:16:in `each'
+app/views/users/index.html.erb:16:in `_app_views_users_index_html_erb___2805808894057944321_25140'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 10:54:55 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 5.3ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    17:       <tr>
+    18:         <td><%= user.last_name %></td>
+    19:         <td><%= user.first_name %></td>
+    20:         <td><%= user.age %></td>
+    21:         <td><%= link_to 'Show', user %></td>
+    22:         <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    23:         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Etes vous sur?' } %></td>
+  
+app/models/user.rb:12:in `age'
+app/views/users/index.html.erb:20:in `block in _app_views_users_index_html_erb___2805808894057944321_27800'
+app/views/users/index.html.erb:16:in `each'
+app/views/users/index.html.erb:16:in `_app_views_users_index_html_erb___2805808894057944321_27800'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 10:55:34 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.0ms)
+Completed 500 Internal Server Error in 26ms (ActiveRecord: 3.6ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    17:       <tr>
+    18:         <td><%= user.last_name %></td>
+    19:         <td><%= user.first_name %></td>
+    20:         <td><%= user.age %></td>
+    21:         <td><%= link_to 'Show', user %></td>
+    22:         <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    23:         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Etes vous sur?' } %></td>
+  
+app/models/user.rb:10:in `age'
+app/views/users/index.html.erb:20:in `block in _app_views_users_index_html_erb___2805808894057944321_30460'
+app/views/users/index.html.erb:16:in `each'
+app/views/users/index.html.erb:16:in `_app_views_users_index_html_erb___2805808894057944321_30460'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 10:56:00 +0100
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 5.1ms)
+
+
+  
+NameError (undefined local variable or method `birthday' for #<Class:0x00007f4f3c2162a8>):
+  
+app/models/user.rb:10:in `<class:User>'
+app/models/user.rb:1:in `<main>'
+app/controllers/users_controller.rb:6:in `index'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 10:56:30 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (0.8ms)
+Completed 500 Internal Server Error in 33ms (ActiveRecord: 6.9ms)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1)):
+    17:       <tr>
+    18:         <td><%= user.last_name %></td>
+    19:         <td><%= user.first_name %></td>
+    20:         <td><%= user.age %></td>
+    21:         <td><%= link_to 'Show', user %></td>
+    22:         <td><%= link_to 'Edit', edit_user_path(user) %></td>
+    23:         <td><%= link_to 'Destroy', user, method: :delete, data: { confirm: 'Etes vous sur?' } %></td>
+  
+app/models/user.rb:10:in `age'
+app/views/users/index.html.erb:20:in `block in _app_views_users_index_html_erb___2805808894057944321_35760'
+app/views/users/index.html.erb:16:in `each'
+app/views/users/index.html.erb:16:in `_app_views_users_index_html_erb___2805808894057944321_35760'
+Started GET "/users" for 127.0.0.1 at 2021-10-12 11:04:44 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.7ms)
+Completed 200 OK in 68ms (Views: 29.2ms | ActiveRecord: 7.0ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 11:07:26 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (17.9ms)
+  Rendered users/new.html.erb within layouts/application (29.0ms)
+Completed 200 OK in 51ms (Views: 50.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 11:07:42 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"H7dqz1sH2Nb2Yms4W5s04n6gT9CRzN4F8wsF3wQiqEj7wx83xhxEpoH73BbR/uScJOkHOxxhLrpaXtzUTtWd0w==", "user"=>{"last_name"=>"Charron ", "first_name"=>"Anthony", "birthday"=>"1989-02-08"}, "commit"=>"Create User"}
+  [1m[35m (1.0ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "Charron "], ["first_name", "Anthony"], ["birthday", "1989-02-08 00:00:00"], ["created_at", "2021-10-12 10:07:42.953874"], ["updated_at", "2021-10-12 10:07:42.953874"]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (4.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:27
+Redirected to http://localhost:3000/users/7
+Completed 302 Found in 13ms (ActiveRecord: 5.4ms)
+
+
+Started GET "/users/7" for 127.0.0.1 at 2021-10-12 11:07:43 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"7"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 7], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 40ms (Views: 35.7ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 11:07:48 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.4ms)
+Completed 200 OK in 28ms (Views: 26.7ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 11:38:03 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.0ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 65ms (Views: 44.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/users/new" for 127.0.0.1 at 2021-10-12 11:38:05 +0100
+Processing by UsersController#new as HTML
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.5ms)
+  Rendered users/new.html.erb within layouts/application (9.4ms)
+Completed 200 OK in 37ms (Views: 36.6ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 11:38:25 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"m2BD/JF5h3YcgO2k9JikjJVTYipq89hhlSuBEI2a885/FDYEDGIbBmsZWop+/XTyzxoqwedeKN48flgbx23GVQ==", "user"=>{"last_name"=>"lebro", "first_name"=>"Anthony", "birthday"=>"1322-10-07"}, "commit"=>"Create User"}
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.7ms)
+  Rendered users/new.html.erb within layouts/application (11.6ms)
+Completed 422 Unprocessable Entity in 32ms (Views: 28.7ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 11:39:23 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"1xjnmoBxetbEEbU2ETExfPFRV8bqnNrCA1nJUFc7OYdbNC2y87SKbPbB50l4jD7umPYknd8f5e5Cr8JcA70NPg==", "user"=>{"last_name"=>"lebro", "first_name"=>"Anthony", "birthday"=>"1871-10-07"}, "commit"=>"Create User"}
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/users_controller.rb:27
+  Rendering users/new.html.erb within layouts/application
+  Rendered users/_form.html.erb (1.5ms)
+  Rendered users/new.html.erb within layouts/application (5.8ms)
+Completed 422 Unprocessable Entity in 28ms (Views: 25.0ms | ActiveRecord: 0.7ms)
+
+
+Started POST "/users" for 127.0.0.1 at 2021-10-12 11:39:30 +0100
+Processing by UsersController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"N8p6xgMBi2QSvZXIWluIJgRCmh6FnQ3/Mh3r0BViHuu75rDucMR73iBtx7cz5oe0beXpRbAeMtNz6+DcQeQqUg==", "user"=>{"last_name"=>"lebro", "first_name"=>"Anthony", "birthday"=>"1872-10-07"}, "commit"=>"Create User"}
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/users_controller.rb:27
+  [1m[36mUser Create (3.0ms)[0m  [1m[32mINSERT INTO "users" ("last_name", "first_name", "birthday", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["last_name", "lebro"], ["first_name", "Anthony"], ["birthday", "1872-10-07 00:00:00"], ["created_at", "2021-10-12 10:39:30.477470"], ["updated_at", "2021-10-12 10:39:30.477470"]]
+  ↳ app/controllers/users_controller.rb:27
+  [1m[35m (2.1ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/users_controller.rb:27
+Redirected to http://localhost:3000/users/8
+Completed 302 Found in 10ms (ActiveRecord: 5.1ms)
+
+
+Started GET "/users/8" for 127.0.0.1 at 2021-10-12 11:39:30 +0100
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"8"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:62
+  Rendering users/show.html.erb within layouts/application
+  Rendered users/show.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 31ms (Views: 28.8ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 11:39:36 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 33ms (Views: 31.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 11:39:59 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 35ms (Views: 32.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 11:45:53 +0100
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ vendor/bundle/ruby/2.7.0/gems/activerecord-5.2.6/lib/active_record/log_subscriber.rb:98
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 323ms (Views: 299.2ms | ActiveRecord: 5.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2021-10-12 11:46:07 +0100
+Processing by Rails::WelcomeController#index as HTML
+  Rendering vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered vendor/bundle/ruby/2.7.0/gems/railties-5.2.6/lib/rails/templates/rails/welcome/index.html.erb (13.6ms)
+Completed 200 OK in 21ms (Views: 20.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users" for 127.0.0.1 at 2021-10-12 11:46:11 +0100
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/controllers/users_controller.rb:6
+  Rendering users/index.html.erb within layouts/application
+  Rendered users/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 19ms (Views: 15.1ms | ActiveRecord: 2.8ms)
+
+

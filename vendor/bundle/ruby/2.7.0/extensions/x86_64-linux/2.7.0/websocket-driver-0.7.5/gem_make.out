@@ -1,0 +1,15 @@
+current directory: /home/anthony/Bureau/test_webatrio/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+/home/anthony/.rvm/rubies/ruby-2.7.4/bin/ruby -I /home/anthony/.rvm/rubies/ruby-2.7.4/lib/ruby/2.7.0 -r ./siteconf20211011-71213-cfeq6p.rb extconf.rb
+creating Makefile
+
+current directory: /home/anthony/Bureau/test_webatrio/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" clean
+
+current directory: /home/anthony/Bureau/test_webatrio/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR="
+compiling websocket_mask.c
+linking shared-object websocket_mask.so
+
+current directory: /home/anthony/Bureau/test_webatrio/vendor/bundle/ruby/2.7.0/gems/websocket-driver-0.7.5/ext/websocket-driver
+make "DESTDIR=" install
+/usr/bin/install -m 0755 websocket_mask.so ./.gem.20211011-71213-1q585zs
